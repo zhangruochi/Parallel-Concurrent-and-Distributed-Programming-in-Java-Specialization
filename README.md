@@ -33,7 +33,7 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 - [Note](./week1/README.md)
 - [Slides](./week1/slides)
 - [Projects](./week1/projects)
-  - [Project1](./week1/projects/project1)
+  - [Project0](./week1/projects/miniproject_0)
 - [Attachments](./week1/attachments)
 
 
