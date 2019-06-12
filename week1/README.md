@@ -60,7 +60,7 @@ private static class ASum extends RecursiveAction {
 
 ### Computation Graphs, Work, Span, Ideal Parallelism
 
-![](resourcrs/1.png)
+![](resources/1.png)
 
 #### Computation Graphs (CGs)
 **Computation Graphs (CGs)**, which model the execution of a parallel program as a partially ordered set. Specifically, a CG consists of:

@@ -36,7 +36,7 @@ and the project tests in
 miniproject_1/src/test/java/edu/coursera/parallel/ReciprocalArraySumTest.java
 miniproject_1/src/test/java/edu/coursera/parallel/ReciprocalArraySumTest.java
 
-Project Instructions
+## Project Instructions
 
 Your modifications should be made entirely inside of ReciprocalArraySum.java. You should not change the signatures of any public or protected methods inside of ReciprocalArraySum, but you can edit the method bodies and add any new methods that you choose. We will use our copy of ReciprocalArraySumTest.java in the final grading process, so do not change that file or any other file except ReciprocalArraySum.java.
 
