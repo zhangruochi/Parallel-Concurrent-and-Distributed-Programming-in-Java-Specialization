@@ -3,7 +3,8 @@ title: Parallel Loops
 date: 2019-06-13 01:03:19
 tags: Java
 keywords:
-mathjax:true
+- Loop Parallelism
+mathjax: true
 categories: Parallel Computation
 description:
 ---
@@ -25,6 +26,8 @@ However, further efficiencies can be gained by paying attention to counted-for l
 forall (i : [0:n-1]) 
     a[i] = b[i] + c[i]
 ```
+
+![](resources/1.png)
 
 We also discussed the fact that Java streams can be an elegant way of specifying parallel loop computations that produce a single output array, e.g., by rewriting the vector addition statement as follows:
 
@@ -107,6 +110,8 @@ for (iter: [0:nsteps-1]) {
 }
 ```
 
+![](resources/2.png)
+
 Though easy to understand, this approach creates nsteps × (n − 1) tasks, which is too many. **Barriers can help reduce the number of tasks created as follows**:
 
 ```Java
@@ -137,8 +142,12 @@ With iteration grouping/chunking, the parallel vector addition example above can
 forall (g:[0:ng-1])
   for (i : mygroup(g, ng, [0:n-1])) a[i] = b[i] + c[i]
 ```
+![](resources/3.png)
 
 Note that we have reduced the degree of parallelism from n to the number of groups, **ng**, which now equals the number of iterations/tasks in the forall construct.
 
 
 There are two well known approaches for iteration grouping: **block** and **cyclic**. The former approach (block) maps consecutive iterations to the same group, whereas the latter approach (cyclic) maps iterations in the same congruence class (mod ng) to the same group. With these concepts, you should now have a better understanding of how to execute forall loops in practice with lower overhead.
+
+
+![](resources/4.png)
