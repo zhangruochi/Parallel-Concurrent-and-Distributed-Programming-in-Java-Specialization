@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="019ea5e1-3852-4a23-9984-d03067d4516d" name="Default Changelist" comment="" />
+    <list default="true" id="63d7f6fe-fa66-4d04-8c4b-80be8e9a7349" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week2/projects/miniproject_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week2/projects/miniproject_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,27 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/Student.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/MatrixMultiply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="504">
+              <caret line="53" column="11" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
               <folding>
-                <element signature="e#1528#1529#0" expanded="true" />
-                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/StudentAnalytics.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/edu/rice/pcdp/pcdp-core/0.0.4-SNAPSHOT/pcdp-core-0.0.4-20171025.051007-2.jar!/edu/rice/pcdp/ProcedureInt2D.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1391">
-              <caret line="125" column="80" lean-forward="true" selection-start-line="125" selection-start-column="80" selection-end-line="125" selection-end-column="80" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -49,22 +49,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/coursera/parallel/StudentAnalytics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/coursera/parallel/MatrixMultiply.java" />
       </list>
     </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/encodings.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
-    <option name="y" value="23" />
+    <option name="x" value="158" />
+    <option name="y" value="44" />
     <option name="width" value="1440" />
     <option name="height" value="781" />
   </component>
@@ -80,40 +80,34 @@
         <subPane>
           <expand>
             <path>
-              <item name="miniproject_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_2" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_2" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_2" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_2" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_2" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="parallel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miniproject_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -122,13 +116,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -146,8 +135,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="All in miniproject_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="miniproject_2" />
+    <configuration name="All in miniproject_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="miniproject_3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -156,7 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in miniproject_2" />
+        <item itemvalue="JUnit.All in miniproject_3" />
       </list>
     </recent_temporary>
   </component>
@@ -165,31 +154,28 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="019ea5e1-3852-4a23-9984-d03067d4516d" name="Default Changelist" comment="" />
-      <created>1560350393487</created>
+      <changelist id="63d7f6fe-fa66-4d04-8c4b-80be8e9a7349" name="Default Changelist" comment="" />
+      <created>1560365900370</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1560350393487</updated>
-      <workItem from="1560350397181" duration="6444000" />
+      <updated>1560365900370</updated>
+      <workItem from="1560365903937" duration="1193000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_miniproject_2 - 2019.06.13 at 00h 20m 09s.xml">
-      <configuration name="All in miniproject_2" configurationId="JUnit" />
+    <history-entry file="All_in_miniproject_3 - 2019.06.13 at 03h 04m 05s.xml">
+      <configuration name="All in miniproject_3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_miniproject_2 - 2019.06.13 at 00h 24m 53s.xml">
-      <configuration name="All in miniproject_2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_miniproject_2 - 2019.06.13 at 00h 25m 52s.xml">
-      <configuration name="All in miniproject_2" configurationId="JUnit" />
+    <history-entry file="All_in_miniproject_3 - 2019.06.13 at 03h 41m 52s.xml">
+      <configuration name="All in miniproject_3" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6444000" />
+    <option name="totallyTimeSpent" value="1193000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="23" width="1440" height="781" extended-state="0" />
+    <frame x="158" y="44" width="1440" height="781" extended-state="0" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -227,21 +213,17 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/Student.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/rice/pcdp/pcdp-core/0.0.4-SNAPSHOT/pcdp-core-0.0.4-20171025.051007-2.jar!/edu/rice/pcdp/ProcedureInt2D.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
-          <folding>
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1559#1560#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/StudentAnalytics.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/MatrixMultiply.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1391">
-          <caret line="125" column="80" lean-forward="true" selection-start-line="125" selection-start-column="80" selection-end-line="125" selection-end-column="80" />
+        <state relative-caret-position="504">
+          <caret line="53" column="11" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

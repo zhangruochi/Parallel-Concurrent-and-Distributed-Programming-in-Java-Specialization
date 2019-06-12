@@ -34,8 +34,8 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 - [Slides](./week1/slides)
 - [Projects](./week1/projects)
   - [Project0](./week1/projects/miniproject_0)
-  - [README](./week1/projects/README.md)
-  - [Tutorial-of-concurrent-packages](./week1/projects/Tutorial-of-Java-s-concurrent-packages.md)
+  - [README.md](./week1/projects/README.md)
+  - [Tutorial-of-concurrent-packages.md](./week1/projects/Tutorial-of-Java-s-concurrent-packages.md)
   - [Project1](./week1/projects/miniproject_1)
 - [Attachments](./week1/attachments)
 
@@ -46,7 +46,7 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 - [Note](./week2/README.md)
 - [Slides](./week2/slides)
 - [Projects](./week2/projects)
-  - [Project2](./week2/projects/README.md)
+  - [README.md](./week2/projects/README.md)
   - [Project2](./week2/projects/miniproject_2)
 - [Attachments](./week2/attachments)
 
