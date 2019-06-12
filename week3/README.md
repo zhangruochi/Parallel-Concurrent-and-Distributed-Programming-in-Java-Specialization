@@ -9,6 +9,14 @@ categories: Parallel Computation
 description:
 ---
 
+Table of Contents
+=================
+
+   * [Loop Parallelism](#loop-parallelism)
+      * [Parallel Matrix Multiplication](#parallel-matrix-multiplication)
+      * [Barriers in Parallel Loops](#barriers-in-parallel-loops)
+         * [One-Dimensional Iterative Averaging](#one-dimensional-iterative-averaging)
+      * [Iteration Grouping: Chunking of Parallel Loops](#iteration-grouping-chunking-of-parallel-loops)
 
 # Loop Parallelism
 

@@ -8,6 +8,22 @@ categories: Parallel Computation
 description: In this module, we will learn about approaches to parallelism that have been inspired by functional programming.
 ---
 
+
+Table of Contents
+=================
+
+   * [Functional Parallelism](#functional-parallelism)
+      * [Creating Future Tasks in Java’s Fork/Join Framework](#creating-future-tasks-in-javas-forkjoin-framework)
+      * [Memoization](#memoization)
+      * [Java Streams](#java-streams)
+      * [Determinism and Data Races](#determinism-and-data-races)
+         * [Determinism](#determinism)
+         * [Data Races](#data-races)
+      * [Fork/Join 框架与 Java Stream API](#forkjoin-框架与-java-stream-api)
+         * [Stream的并发实现细节](#stream的并发实现细节)
+         * [Example](#example)
+         
+
 # Functional Parallelism
 
 **Future tasks** are tasks with return values

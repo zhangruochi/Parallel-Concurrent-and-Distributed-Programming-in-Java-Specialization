@@ -30,6 +30,14 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week1
 - Overview
+  - Task-level Parallelism
+    - Task Creation and Termination (Async, Finish)
+    - Creating Tasks in Java's Fork/Join Framework
+    - Computation Graphs, Work, Span, Ideal Parallelism
+      - Computation Graphs (CGs)
+      - ideal parallelism
+    - Multiprocessor Scheduling, Parallel Speedup
+    - Amdahl’s Law
 - [Note](./week1/README.md)
 - [Slides](./week1/slides)
 - [Projects](./week1/projects)
@@ -43,6 +51,16 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week2
 - Overview
+  - Functional Parallelism
+    - Creating Future Tasks in Java’s Fork/Join Framework
+    - Memoization
+    - Java Streams
+    - Determinism and Data Races
+      - Determinism
+      - Data Races
+    - Fork/Join 框架与 Java Stream API
+    - Stream的并发实现细节
+    - Example
 - [Note](./week2/README.md)
 - [Slides](./week2/slides)
 - [Projects](./week2/projects)
@@ -53,10 +71,16 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week3
 - Overview
+  - Loop Parallelism
+    - Parallel Matrix Multiplication
+    - Barriers in Parallel Loops
+      - One-Dimensional Iterative Averaging
+    - Iteration Grouping: Chunking of Parallel Loops
 - [Note](./week3/README.md)
 - [Slides](./week3/slides)
 - [Projects](./week3/projects)
-  - [Project3](./week3/projects/project3)
+  - [README.md](./week3/projects/README.md)
+  - [Project3](./week3/projects/miniproject_3)
 - [Attachments](./week3/attachments)
 
 
