@@ -86,8 +86,16 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week4
 - Overview
+  - Split-phase Barriers with Java Phasers
+   - Phaser Understanding
+  - Point-to-Point Synchronization with Phasers
+  - One-Dimensional Iterative Averaging with Phasers
+  - Pipeline Parallelism
+  - Data Flow Parallelism
 - [Note](./week4/README.md)
 - [Slides](./week4/slides)
 - [Projects](./week4/projects)
+  - [README.md](./week4/projects/README.md)
+  - [Project4](./week4/projects/miniproject_4)
 - [Attachments](./week4/attachments)
 
