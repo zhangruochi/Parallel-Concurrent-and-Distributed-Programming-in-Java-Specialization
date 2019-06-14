@@ -25,6 +25,8 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ## Course One Certificate
 
+![Parallel Programming in Java](./Parallel_Programming_in_Java.png)
+
 
 ## My Course One Notes
 
