@@ -1,3 +1,9 @@
+# Parallel, Concurrent, and Distributed Programming in Java Specialization
+
+Parallel, concurrent, and distributed programming underlies software in multiple domains, ranging from biomedical research to financial services. This specialization is intended for anyone with a basic knowledge of sequential programming in Java, who is motivated to learn how to write parallel, concurrent and distributed programs. Through a collection of three courses (which may be taken in any order or separately), you will learn foundational topics in Parallelism, Concurrency, and Distribution. These courses will prepare you for multithreaded and distributed programming for a wide range of computer platforms, from mobile devices to cloud computing servers.
+
+
+
 # Parallel Programming in Java
 
 **About this Course** This course teaches learners (industry professionals and students) the fundamental concepts of parallel programming in the context of Java 8. Parallel programming enables developers to use multicore computers to make their applications run faster by using multiple processors at the same time. By the end of this course, you will learn how to use popular parallel Java frameworks (such as ForkJoin, Stream, and Phaser) to write parallel programs for a wide range of multicore platforms including servers, desktops, or mobile devices, while also learning about their theoretical foundations including computation graphs, ideal parallelism, parallel speedup, Amdahl's Law, data races, and determinism.
@@ -100,4 +106,69 @@ Mastery of these concepts will enable you to immediately apply them in the conte
   - [README.md](./week4/projects/README.md)
   - [Project4](./week4/projects/miniproject_4)
 - [Attachments](./week4/attachments)
+
+
+
+# Concurrent Programming in Java
+
+**About this Course** This course teaches learners (industry professionals and students) the fundamental concepts of concurrent programming in the context of Java 8.   Concurrent programming enables developers to efficiently and correctly mediate the use of shared resources in parallel programs.  By the end of this course, you will learn how to use basic concurrency constructs in Java such as threads, locks, critical sections, atomic variables, isolation, actors, optimistic concurrency and concurrent collections, as well as their theoretical foundations (e.g., progress guarantees, deadlock, livelock, starvation, linearizability).
+
+**Why take this course?**
+
+- It is important for you to be aware of the theoretical foundations of concurrency to avoid common but subtle programming errors. 
+- Java 8 has modernized many of the concurrency constructs since the early days of threads and locks.
+- During the course, you will have online access to the instructor and mentors to get individualized answers to your questions posted on the forums.
+- Each of the four modules in the course includes an assigned mini-project that will provide you with the necessary hands-on experience to use the concepts learned in the course on your own, after the course ends.
+
+The desired learning outcomes of this course are as follows:
+
+- Concurrency theory: progress guarantees, deadlock, livelock, starvation, linearizability
+- Use of threads and structured/unstructured locks in Java
+- Atomic variables and isolation
+- Optimistic concurrency and concurrent collections in Java (e.g., concurrent queues, concurrent  hashmaps)
+- Actor model in Java
+
+Mastery of these concepts will enable you to immediately apply them in the context of concurrent Java programs, and will also help you master other concurrent programming system that you may encounter in the future  (e.g., POSIX threads, .NET threads).
+
+
+## Resources
+- [Course Resouces](./resources)
+
+## Course One Certificate
+
+
+
+## My Course One Notes
+
+### Week5
+- Overview
+- [Note](./week5/README.md)
+- [Slides](./week5/slides)
+- [Projects](./week5/projects)
+- [Attachments](./week5/attachments)
+
+
+
+### Week6
+- Overview
+- [Note](./week6/README.md)
+- [Slides](./week6/slides)
+- [Projects](./week6/projects)
+- [Attachments](./week6/attachments)
+
+
+### Week7
+- Overview
+- [Note](./week7/README.md)
+- [Slides](./week7/slides)
+- [Projects](./week7/projects)
+- [Attachments](./week7/attachments)
+
+
+### Week8
+- Overview
+- [Note](./week8/README.md)
+- [Slides](./week8/slides)
+- [Projects](./week8/projects)
+- [Attachments](./week8/attachments)
 
