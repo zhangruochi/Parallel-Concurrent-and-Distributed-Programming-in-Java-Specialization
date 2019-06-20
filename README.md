@@ -145,6 +145,8 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 - [Note](./week5/README.md)
 - [Slides](./week5/slides)
 - [Projects](./week5/projects)
+  - [README.md](./week5/projects/README.md)
+  - [Project4](./week5/projects/miniproject_5)
 - [Attachments](./week5/attachments)
 
 
