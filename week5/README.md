@@ -265,3 +265,232 @@ First, we examined a solution to this problem using structured locks, and demons
 2. **资源分级**: 另外一种方法就是给资源分级，例如上图中的五只筷子，给它们分级为1\~5五个等级。 
 约定：每位哲学家在就餐拿筷子的时候，只能先拿级别比较低的筷子，然后才能拿级别比较高的。用餐完以后，先放下级别比较高的筷子，再放下编号比较低的。这样也不会出现死锁的情况。假如大家同时拿起一只筷子，那么级别最高的5号筷子一定还留在桌子上。此时哲学家A或者E就能拿起它凑成两只筷子开始进餐。进餐完以后放下筷子，其他哲学家又能进餐了。但是仍然有starvation的情况。
 
+```Java
+package edu.coursera.concurrent;
+
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+/**
+ * Wrapper class for two lock-based concurrent list implementations.
+ */
+public final class CoarseLists {
+    /**
+     * An implementation of the ListSet interface that uses Java locks to
+     * protect against concurrent accesses.
+     *
+     * TODO Implement the add, remove, and contains methods below to support
+     * correct, concurrent access to this list. Use a Java ReentrantLock object
+     * to protect against those concurrent accesses. You may refer to
+     * SyncList.java for help understanding the list management logic, and for
+     * guidance in understanding where to place lock-based synchronization.
+     */
+    public static final class CoarseList extends ListSet {
+        /*
+         * TODO Declare a lock for this class to be used in implementing the
+         * concurrent add, remove, and contains methods below.
+         */
+         private final ReentrantLock lock = new  ReentrantLock();
+
+
+        /**
+         * Default constructor.
+         */
+        public CoarseList() {
+            super();
+        }
+
+        /**
+         * {@inheritDoc}
+         *
+         * TODO Use a lock to protect against concurrent access.
+         */
+        @Override
+        boolean add(final Integer object) {
+
+            try {
+                lock.lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+
+                if (object.equals(curr.object)) {
+                    return false;
+                } else {
+                    final Entry entry = new Entry(object);
+                    entry.next = curr;
+                    pred.next = entry;
+                    return true;
+                }
+            } finally {
+                lock.unlock();
+            }
+        }
+
+        /**
+         * {@inheritDoc}
+         *
+         * TODO Use a lock to protect against concurrent access.
+         */
+        @Override
+        boolean remove(final Integer object) {
+            try {
+                lock.lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+
+                if (object.equals(curr.object)) {
+                    pred.next = curr.next;
+                    return true;
+                } else {
+                    return false;
+                }
+            }finally {
+                lock.unlock();
+            }
+
+        }
+
+        /**
+         * {@inheritDoc}
+         *
+         * TODO Use a lock to protect against concurrent access.
+         */
+        @Override
+        boolean contains(final Integer object) {
+            try {
+                lock.lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+                return object.equals(curr.object);
+            }finally {
+                lock.unlock();
+            }
+        }
+    }
+
+    /**
+     * An implementation of the ListSet interface that uses Java read-write
+     * locks to protect against concurrent accesses.
+     *
+     * TODO Implement the add, remove, and contains methods below to support
+     * correct, concurrent access to this list. Use a Java
+     * ReentrantReadWriteLock object to protect against those concurrent
+     * accesses. You may refer to SyncList.java for help understanding the list
+     * management logic, and for guidance in understanding where to place
+     * lock-based synchronization.
+     */
+    public static final class RWCoarseList extends ListSet {
+        /*
+         * TODO Declare a read-write lock for this class to be used in
+         * implementing the concurrent add, remove, and contains methods below.
+         */
+
+        private ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+
+        /**
+         * Default constructor.
+         */
+        public RWCoarseList() {
+            super();
+        }
+
+        /**
+         * {@inheritDoc}
+         *
+         * TODO Use a read-write lock to protect against concurrent access.
+         */
+        @Override
+        boolean add(final Integer object) {
+
+            try {
+                readWriteLock.writeLock().lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+
+                if (object.equals(curr.object)) {
+                    return false;
+                } else {
+                    final Entry entry = new Entry(object);
+                    entry.next = curr;
+                    pred.next = entry;
+                    return true;
+                }
+            }finally {
+                readWriteLock.writeLock().unlock();
+            }
+        }
+
+        /**
+         * {@inheritDoc}
+         *
+         * TODO Use a read-write lock to protect against concurrent access.
+         */
+        @Override
+        boolean remove(final Integer object) {
+
+            try {
+                readWriteLock.writeLock().lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+
+                if (object.equals(curr.object)) {
+                    pred.next = curr.next;
+                    return true;
+                } else {
+                    return false;
+                }
+            }finally {
+                readWriteLock.writeLock().unlock();
+            }
+        }
+
+        /**
+         * {@inheritDoc}
+         *
+         * TODO Use a read-write lock to protect against concurrent access.
+         */
+        @Override
+        boolean contains(final Integer object) {
+            try {
+                readWriteLock.readLock().lock();
+                Entry pred = this.head;
+                Entry curr = pred.next;
+
+                while (curr.object.compareTo(object) < 0) {
+                    pred = curr;
+                    curr = curr.next;
+                }
+                return object.equals(curr.object);
+            }finally {
+                readWriteLock.readLock().unlock();
+            }
+        }
+    }
+}
+```
+

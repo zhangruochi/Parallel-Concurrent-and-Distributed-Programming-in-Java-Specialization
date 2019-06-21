@@ -142,6 +142,13 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week5
 - Overview
+  - Threads
+  - Structured Locks
+  - Unstructured Locks
+  - Liveness and Progress Guarantees
+    - synchronized 用法
+  - Deadlock‘s example
+  - Dining Philosophers Problem
 - [Note](./week5/README.md)
 - [Slides](./week5/slides)
 - [Projects](./week5/projects)
@@ -153,6 +160,11 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week6
 - Overview
+  - Critical Sections
+  - Object-Based Isolation
+  - Spanning Tree Example
+  - Atomic Variables
+  - Read-Write Isolation
 - [Note](./week6/README.md)
 - [Slides](./week6/slides)
 - [Projects](./week6/projects)
