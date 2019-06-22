@@ -175,16 +175,30 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week7
 - Overview
+  - Actor Model
+  - Actor Examples
+    - Sieve of Eratosthenes(埃拉托斯特尼筛法)
+  - Producer-Consumer Problem with Unbounded Buffer
+  - Producer-Consumer Problem with Bounded Buffer
 - [Note](./week7/README.md)
 - [Slides](./week7/slides)
 - [Projects](./week7/projects)
+  - [README.md](./week7/projects/README.md)
+  - [Project7](./week7/projects/miniproject_7)
 - [Attachments](./week7/attachments)
 
 
 ### Week8
 - Overview
+  - Optimistic Concurrency
+  - Concurrent Queue
+  - Linearizability
+  - Concurrent HashMap
+  - Concurrent Minimum Spanning Tree Algorithm
 - [Note](./week8/README.md)
 - [Slides](./week8/slides)
 - [Projects](./week8/projects)
+  - [README.md](./week8/projects/README.md)
+  - [Project8](./week8/projects/miniproject_8)
 - [Attachments](./week8/attachments)
 
