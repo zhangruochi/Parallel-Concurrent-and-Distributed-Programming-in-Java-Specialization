@@ -153,7 +153,7 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 - [Slides](./week5/slides)
 - [Projects](./week5/projects)
   - [README.md](./week5/projects/README.md)
-  - [Project4](./week5/projects/miniproject_5)
+  - [Project5](./week5/projects/miniproject_5)
 - [Attachments](./week5/attachments)
 
 
@@ -168,6 +168,8 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 - [Note](./week6/README.md)
 - [Slides](./week6/slides)
 - [Projects](./week6/projects)
+  - [README.md](./week6/projects/README.md)
+  - [Project6](./week6/projects/miniproject_6)
 - [Attachments](./week6/attachments)
 
 
