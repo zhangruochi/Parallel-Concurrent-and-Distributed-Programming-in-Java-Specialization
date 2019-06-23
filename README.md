@@ -252,6 +252,14 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week10
 - Overview
+  - Introduction to Sockets
+  - Serialization and Deserialization
+  - Remote Method Invocation
+    - 远程调用
+      - RPC
+      - RMI
+  - Multicast Sockets
+  - Publish-Subscribe Pattern
 - [Note](./week10/README.md)
 - [Slides](./week10/slides)
 - [Projects](./week10/projects)
