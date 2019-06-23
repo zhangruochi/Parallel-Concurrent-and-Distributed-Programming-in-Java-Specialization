@@ -1,5 +1,7 @@
 package edu.coursera.concurrent;
 
+import edu.coursera.concurrent.AbstractBoruvka;
+import edu.coursera.concurrent.SolutionToBoruvka;
 import edu.coursera.concurrent.boruvka.Edge;
 import edu.coursera.concurrent.boruvka.Component;
 
@@ -14,7 +16,6 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public final class ParBoruvka extends AbstractBoruvka<ParBoruvka.ParComponent> {
 
-//    static private ReentrantLock solutionLock = new ReentrantLock();
     /**
      * Constructor.
      */
@@ -29,45 +30,52 @@ public final class ParBoruvka extends AbstractBoruvka<ParBoruvka.ParComponent> {
     public void computeBoruvka(final Queue<ParComponent> nodesLoaded,
                                final SolutionToBoruvka<ParComponent> solution) {
 
-        ParComponent current = null;
-        while (!nodesLoaded.isEmpty()) {
-            current = nodesLoaded.poll();
+        ParComponent loopNode = null;
 
-            // Empty queue or the component is acquired by another thread.
-            if (current == null || !current.lock.tryLock()) {
+        while((loopNode = nodesLoaded.poll()) != null) {
+            if (!loopNode.lock.tryLock()) {
+                continue;  // Optimistic Concurrency :: Current polled node is locked ,
+                // continue and poll another node
+            }
+
+            if (loopNode.isDead) {
+                loopNode.lock.unlock();
                 continue;
             }
 
-            // Already processed.
-            if (current.isDead) {
-                current.lock.unlock();
-                continue;
-            }
-
-            // Maybe the graph is processed, set the solution.
-            Edge<ParComponent> minEdge = current.getMinEdge();
-            if (minEdge == null) {
-                current.lock.unlock();
-
-//                solutionLock.lock();
-                solution.setSolution(current);
+            final Edge<ParComponent> edge = loopNode.getMinEdge();
+            if (edge == null) {
+                // No Edge  -- > all nodes merged to MST graph
+                solution.setSolution(loopNode);
                 break;
             }
 
-            // Process current component.
-            final ParComponent other = minEdge.getOther(current);
+            final ParComponent other = edge.getOther(loopNode);
+
+            // Try to get lock on Other node so no other thread is also Merging with this Node
             if (!other.lock.tryLock()) {
-                current.lock.unlock();
-                nodesLoaded.add(current);
+                loopNode.lock.unlock();
+                nodesLoaded.add(loopNode);
+                continue;
+            }
+            // Acquired lock on Other node with Min weight
+            if (other.isDead) {
+                // Other is already Processed
+                other.lock.unlock(); // Release Both Locks
+                loopNode.lock.unlock();
                 continue;
             }
 
             other.isDead = true;
-            current.merge(other, minEdge.weight());
-            current.lock.unlock();
+            // Other Node was not Dead --> Both Nodes of edge are locked --> Merge
+            loopNode.merge(other, edge.weight());
+
+            //Release Resources
+            loopNode.lock.unlock();
             other.lock.unlock();
 
-            nodesLoaded.add(current);
+            // Add merged Node to Queue
+            nodesLoaded.add(loopNode);
         }
     }
 
@@ -82,7 +90,6 @@ public final class ParBoruvka extends AbstractBoruvka<ParBoruvka.ParComponent> {
          *  it.
          */
         public final int nodeId;
-        public final ReentrantLock lock = new ReentrantLock();
 
         /**
          * List of edges attached to this component, sorted by weight from least
@@ -113,6 +120,8 @@ public final class ParBoruvka extends AbstractBoruvka<ParBoruvka.ParComponent> {
          *
          * @param setNodeId ID for this node.
          */
+
+        final  ReentrantLock lock = new ReentrantLock();
         public ParComponent(final int setNodeId) {
             super();
             this.nodeId = setNodeId;

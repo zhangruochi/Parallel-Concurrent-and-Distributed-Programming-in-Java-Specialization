@@ -136,7 +136,7 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ## Course One Certificate
 
-
+![](Concurrent_Programming_in_Java.png)
 
 ## My Course One Notes
 
@@ -201,4 +201,76 @@ Mastery of these concepts will enable you to immediately apply them in the conte
   - [README.md](./week8/projects/README.md)
   - [Project8](./week8/projects/miniproject_8)
 - [Attachments](./week8/attachments)
+
+
+# Distributed Programming in Java
+
+**About this Course** This course teaches learners (industry professionals and students) the fundamental concepts of Distributed Programming in the context of Java 8.  Distributed programming enables developers to use multiple nodes in a data center to increase throughput and/or reduce latency of selected applications.  By the end of this course, you will learn how to use popular distributed programming frameworks for Java programs, including Hadoop, Spark, Sockets, Remote Method Invocation (RMI), Multicast Sockets, Kafka, Message Passing Interface (MPI), as well as different approaches to combine distribution with multithreading.
+
+**Why take this course?**
+
+- All data center servers are organized as collections of distributed servers, and it is important for you to also learn how to use multiple servers for increased bandwidth and reduced latency.
+- In addition to learning specific frameworks for distributed programming, this course will teach you how to integrate multicore and distributed parallelism in a unified approach.
+- Each of the four modules in the course includes an assigned mini-project that will provide you with the necessary hands-on experience to use the concepts learned in the course on your own, after the course ends.
+- During the course, you will have online access to the instructor and the mentors to get individualized answers to your questions posted on forums.
+
+
+**The desired learning outcomes of this course are as follows**:
+
+- Distributed map-reduce programming in Java using the Hadoop and Spark frameworks
+- Client-server programming using Java's Socket and Remote Method Invocation (RMI) interfaces
+- Message-passing programming in Java using the Message Passing Interface (MPI)
+- Approaches to combine distribution with multithreading, including processes and threads, distributed actors, and reactive programming
+
+Mastery of these concepts will enable you to immediately apply them in the context of distributed Java programs, and will also provide the foundation for mastering other distributed programming frameworks that you may encounter in the future  (e.g., in Scala or C++).
+
+
+## Resources
+- [Course Resouces](./resources)
+
+## Course One Certificate
+
+
+
+## My Course One Notes
+
+### Week9
+- Overview
+- [Note](./week9/README.md)
+- [Slides](./week9/slides)
+- [Projects](./week9/projects)
+  - [README.md](./week9/projects/README.md)
+  - [Project9](./week9/projects/miniproject_9)
+- [Attachments](./week9/attachments)
+
+
+
+### Week10
+- Overview
+- [Note](./week10/README.md)
+- [Slides](./week10/slides)
+- [Projects](./week10/projects)
+  - [README.md](./week10/projects/README.md)
+  - [Project10](./week10/projects/miniproject_10)
+- [Attachments](./week10/attachments)
+
+
+### Week11
+- Overview
+- [Note](./week11/README.md)
+- [Slides](./week11/slides)
+- [Projects](./week11/projects)
+  - [README.md](./week11/projects/README.md)
+  - [Project11](./week11/projects/miniproject_11)
+- [Attachments](./week11/attachments)
+
+
+### Week12
+- Overview
+- [Note](./week12/README.md)
+- [Slides](./week12/slides)
+- [Projects](./week12/projects)
+  - [README.md](./week12/projects/README.md)
+  - [Project12](./week12/projects/miniproject_12)
+- [Attachments](./week12/attachments)
 
