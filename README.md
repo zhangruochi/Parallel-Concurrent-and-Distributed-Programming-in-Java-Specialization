@@ -2,7 +2,7 @@
 
 Parallel, concurrent, and distributed programming underlies software in multiple domains, ranging from biomedical research to financial services. This specialization is intended for anyone with a basic knowledge of sequential programming in Java, who is motivated to learn how to write parallel, concurrent and distributed programs. Through a collection of three courses (which may be taken in any order or separately), you will learn foundational topics in Parallelism, Concurrency, and Distribution. These courses will prepare you for multithreaded and distributed programming for a wide range of computer platforms, from mobile devices to cloud computing servers.
 
-
+------
 
 # Parallel Programming in Java
 
@@ -236,6 +236,11 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week9
 - Overview
+  - Introduction to MapReduce
+  - Apache Hadoop Project
+  - Apache Spark Framework
+  - TF-IDF Example
+  - Page Rank Example
 - [Note](./week9/README.md)
 - [Slides](./week9/slides)
 - [Projects](./week9/projects)
@@ -273,4 +278,5 @@ Mastery of these concepts will enable you to immediately apply them in the conte
   - [README.md](./week12/projects/README.md)
   - [Project12](./week12/projects/miniproject_12)
 - [Attachments](./week12/attachments)
+
 
