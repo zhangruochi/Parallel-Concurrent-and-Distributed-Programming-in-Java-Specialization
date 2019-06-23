@@ -25,7 +25,7 @@ Finally, when a user-specified reduce function,g, is applied on two or more grou
 In the example discussed in the lecture, we assumed that the map function, $f$ mapped a key-value pair like (WR,10) to a set of intermediate key-value pairs obained from factors of 10 to obtain the set, {(WR,2),(WR,5),(WR,10)}, and the reduce function,$g$, calculated the sum of all the values with the same key to obtain (WR,17) as the output key-value pair for key “WR”. The same process can be performed in parallel for all keys to obtain the complete output key-value set.
 
 
-![](1.png)
+![](resources/1.png)
 
 ## Apache Hadoop Project
 
@@ -54,7 +54,7 @@ $$Weight(TERM_{i},D_{j}) = TF_{i,j} * log(N/ DF_{i})$$
 
 Using MapReduce, we can compute the $TF_{i,j}$ values by using a MAP operation to find all the occurrences of $TERM_{i}$ in document $D_{j}$  followed by a REDUCE operation to add up all the occurrences of $TERM_{i}$  as key-value pairs of the form, $((d_{j}, TERM_{i}), TF_{i,j})$ (as in the Word Count example studied earlier). These key-value pairs can also be used to compute $DF_{i}$ values by using a MAP operation to identify all the documents that contain $TERM_{i}$ and a REDUCE operation to count the number of documents that $TERM_{i}$ appears in. The final weights can then be easily computed from the $TF_{i,j})$ and $DF_{i}$ ​values. Since the TF-IDF computation uses a fixed (not iterative) number of MAP and REDUCE operations, it is a good candidate for both Hadoop and Spark frameworks.
 
-![](2.png)
+![](resources/2.png)
 
 ## Page Rank Example
 **Lecture Summary**: In this lecture, we discussed the PageRank algorithm as an example of an iterative algorithm that is well suited for the Spark framework. The goal of the algorithm is to determine which web pages are more important by examining links from one page to other pages. In this algorithm, the rank of a page,B, is defined as follows,
@@ -63,3 +63,86 @@ $$RANK(B) = \sum_{A \in SRC(B) }\frac{RANK(A)}{DEST_COUNT(A)}$$
 where SRC(B) is the set of pages that contain a link to B, while $DEST_COUNT(A)$ is the total number of pages that A links to, Intuitively, the PageRank algorithm works by splitting the weight of a page A,  among all of the pages that A links to, Each page that A links to has its own rank increased proportional to A's own rank. As a result, pages that are linked to from many highly-ranked pages will also be highly ranked.
 
 The motivation to divide the contribution of A  in the sum by $DEST_COUNT(A)$ is that if page A links to multiple pages, each of the successors should get a fraction of the contribution from page A Conversely, if a page has many outgoing links, then each successor page gets a relatively smaller weightage, compared to pages that have fewer outgoing links. This is a recursive definition in general, since if (say) page X links to page Y, page Y links to page X, then RANK(X) depends on RANK(Y) and vice versa. Given the recursive nature of the problem, we can use an iterative algorithm to compute all page ranks by repeatedly updating the rank values using the above formula, and stopping when the rank values have converged to some acceptable level of precision.In each iteration, the new value of RANK(B) can be computed by accumulating the contributions from each predecessor page, A. A parallel implementation in Spark can be easily obtained by implementing two steps in an iteration, one for computing the contributions of each page to its successor pages by using the flatMapToPair() method, and the second for computing the current rank of each page by using the reduceByKey() and mapValues() methods.. All the intermediate results between iterations will be kept in main memory, resulting in a much faster execution than a Hadoop version (which would store intermediate results in external storage).
+
+
+```Java
+package edu.coursera.distributed;
+
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaPairRDD;
+import scala.Tuple2;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * A wrapper class for the implementation of a single iteration of the iterative
+ * PageRank algorithm.
+ */
+public final class PageRank {
+    /**
+     * Default constructor.
+     */
+    private PageRank() {
+    }
+
+    /**
+     * TODO Given an RDD of websites and their ranks, compute new ranks for all
+     * websites and return a new RDD containing the updated ranks.
+     *
+     * Recall from lectures that given a website B with many other websites
+     * linking to it, the updated rank for B is the sum over all source websites
+     * of the rank of the source website divided by the number of outbound links
+     * from the source website. This new rank is damped by multiplying it by
+     * 0.85 and adding that to 0.15. Put more simply:
+     *
+     *   new_rank(B) = 0.15 + 0.85 * sum(rank(A) / out_count(A)) for all A linking to B
+     *
+     * For this assignment, you are responsible for implementing this PageRank
+     * algorithm using the Spark Java APIs.
+     *
+     * The reference solution of sparkPageRank uses the following Spark RDD
+     * APIs. However, you are free to develop whatever solution makes the most
+     * sense to you which also demonstrates speedup on multiple threads.
+     *
+     *   1) JavaPairRDD.join
+     *   2) JavaRDD.flatMapToPair
+     *   3) JavaPairRDD.reduceByKey
+     *   4) JavaRDD.mapValues
+     *
+     * @param sites The connectivity of the website graph, keyed on unique
+     *              website IDs.
+     * @param ranks The current ranks of each website, keyed on unique website
+     *              IDs.
+     * @return The new ranks of the websites graph, using the PageRank
+     *         algorithm to update site ranks.
+     */
+    public static JavaPairRDD<Integer, Double> sparkPageRank(
+            final JavaPairRDD<Integer, Website> sites,
+            final JavaPairRDD<Integer, Double> ranks) {
+
+        JavaPairRDD<Integer,Double> newRanks =
+                sites.join(ranks).flatMapToPair(
+                        kv -> {
+//                            Integer websiteId = kv._1();
+                            Tuple2<Website, Double> value = kv._2();
+                            Website edges = value._1();
+                            Double currentRank = value._2();
+
+                            List<Tuple2<Integer, Double>> contribs = new LinkedList<>();
+                            Iterator<Integer> iter = edges.edgeIterator();
+
+                            while (iter.hasNext()) {
+                                final int target = iter.next();
+                                contribs.add(new Tuple2(target, currentRank / (double) edges.getNEdges()));
+                            }
+
+                            return contribs;
+                        });
+
+        return newRanks.reduceByKey((Double r1, Double r2) -> r1 + r2).mapValues(x -> 0.15 + 0.85 * x);
+    }
+}
+```
