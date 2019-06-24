@@ -270,6 +270,20 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week11
 - Overview
+  - MPI(Message Passing Interface)
+    - MPI的工作方式
+    - 点对点通信
+    - 群体通信
+      - 广播bcast
+      - 散播scatter
+      - 收集gather
+      - 规约reduce
+      - 非阻塞标准通信
+  - Single Program Multiple Data (SPMD) Model
+  - Point-to-Point Communication
+  - Message Ordering and Deadlock
+  - Non-Blocking Communications
+  - Collective Communication
 - [Note](./week11/README.md)
 - [Slides](./week11/slides)
 - [Projects](./week11/projects)

@@ -1,0 +1,133 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.coursera.distributed</groupId>
+    <artifactId>miniproject_3</artifactId>
+    <packaging>jar</packaging>
+    <version>0.0</version>
+    <name>miniproject_3</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>4.2.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- specify the java version to use during compilation -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <!-- populates the properties for dependency jar paths  -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.9</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>properties</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <!-- executes test with -Xmx option -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.17</version>
+                    <configuration>
+                        <forkMode>pertest</forkMode> 
+                        <argLine>-Xmx4g</argLine>
+                        <useSystemClassLoader>true</useSystemClassLoader>
+                        <testFailureIgnore>true</testFailureIgnore>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.17</version>
+                    <executions>
+                        <execution>
+                            <id>checkstyle</id>
+                            <phase>validate</phase>
+                            <configuration>
+                                <configLocation>${basedir}/src/main/resources/checkstyle.xml</configLocation>
+                                <encoding>UTF-8</encoding>
+                                <consoleOutput>true</consoleOutput>
+                                <failsOnError>true</failsOnError>
+                                <failOnViolation>true</failOnViolation>
+                            </configuration>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>MPITests-4</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- executes the main program -->
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>test-compile</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <executable>mpirun</executable>
+                            <arguments>
+                                <argument>-n</argument>
+                                <argument>4</argument>
+                                <argument>java</argument>
+                                <argument>-Xmx4g</argument>
+                                <argument>-DCOURSERA_GRADER_NCORES=4</argument>
+                                <argument>-cp</argument>
+                                <argument>jna-4.2.2.jar:junit-4.12.jar:hamcrest-core-1.3.jar:${basedir}/target/classes:${basedir}/target/test-classes</argument>
+                                <argument>org.junit.runner.JUnitCore</argument>
+                                <argument>edu.coursera.distributed.MpiJavaTest</argument>
+                             </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
