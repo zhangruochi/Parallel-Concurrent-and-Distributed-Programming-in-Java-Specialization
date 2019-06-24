@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19c35c30-37c8-4b8b-a140-648ca00a7851" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week12/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week12/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week12/projects/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week12/projects/README.md" afterDir="false" />
+    <list default="true" id="a963f854-1e2f-48b6-8ac5-9abda3374a3b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/projects/miniproject_11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../week11/projects/miniproject_11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,13 +15,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/distributed/MatrixMult.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/distributed/FileServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+            <state relative-caret-position="345">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -33,7 +38,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/coursera/distributed/MatrixMult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/coursera/distributed/FileServer.java" />
       </list>
     </option>
   </component>
@@ -47,8 +52,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="91" />
-    <option name="y" value="60" />
+    <option name="x" value="-1" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="781" />
   </component>
@@ -58,34 +63,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_11" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_12" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_11" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_12" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_11" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_12" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_11" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_12" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="miniproject_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_11" type="462c0819:PsiDirectoryNode" />
+              <item name="miniproject_4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniproject_12" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -96,11 +102,9 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -119,26 +123,52 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="edu.coursera.distributed in miniproject_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="miniproject_4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.coursera.distributed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.coursera.distributed" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.edu.coursera.distributed in miniproject_4" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19c35c30-37c8-4b8b-a140-648ca00a7851" name="Default Changelist" comment="" />
-      <created>1561383536059</created>
+      <changelist id="a963f854-1e2f-48b6-8ac5-9abda3374a3b" name="Default Changelist" comment="" />
+      <created>1561391266671</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1561383536059</updated>
-      <workItem from="1561383539998" duration="633000" />
-      <workItem from="1561391206091" duration="47000" />
+      <updated>1561391266671</updated>
+      <workItem from="1561391267999" duration="150000" />
+      <workItem from="1561391574789" duration="19000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="edu_coursera_distributed_in_miniproject_4 - 2019.06.24 at 23h 49m 29s.xml">
+      <configuration name="edu.coursera.distributed in miniproject_4" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="680000" />
+    <option name="totallyTimeSpent" value="169000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="60" width="1440" height="781" extended-state="0" />
+    <frame x="-1" y="23" width="1440" height="781" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
@@ -147,39 +177,40 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32946298" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/distributed/MatrixMult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/distributed/FileServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        <state relative-caret-position="345">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
         </state>
       </provider>
     </entry>

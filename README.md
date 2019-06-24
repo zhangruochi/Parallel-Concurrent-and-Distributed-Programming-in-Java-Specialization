@@ -2,6 +2,9 @@
 
 Parallel, concurrent, and distributed programming underlies software in multiple domains, ranging from biomedical research to financial services. This specialization is intended for anyone with a basic knowledge of sequential programming in Java, who is motivated to learn how to write parallel, concurrent and distributed programs. Through a collection of three courses (which may be taken in any order or separately), you will learn foundational topics in Parallelism, Concurrency, and Distribution. These courses will prepare you for multithreaded and distributed programming for a wide range of computer platforms, from mobile devices to cloud computing servers.
 
+
+![](ParallelConcurrentAndDistributedProgrammingInJava.png)
+
 ------
 
 # Parallel Programming in Java
@@ -230,7 +233,7 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ## Course One Certificate
 
-
+![](DistributedProgrammingInJava.png)
 
 ## My Course One Notes
 
@@ -294,6 +297,11 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 
 ### Week12
 - Overview
+  - Combining Distribution and Multithreading
+  - Multithreaded Servers
+  - MPI and Multithreading
+  - Distributed Actors
+  - Distributed Reactive Programming
 - [Note](./week12/README.md)
 - [Slides](./week12/slides)
 - [Projects](./week12/projects)
