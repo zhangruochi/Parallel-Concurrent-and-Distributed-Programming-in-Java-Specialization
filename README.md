@@ -137,11 +137,11 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 ## Resources
 - [Course Resouces](./resources)
 
-## Course One Certificate
+## Course Two Certificate
 
 ![](Concurrent_Programming_in_Java.png)
 
-## My Course One Notes
+## My Course Two Notes
 
 ### Week5
 - Overview
@@ -231,11 +231,11 @@ Mastery of these concepts will enable you to immediately apply them in the conte
 ## Resources
 - [Course Resouces](./resources)
 
-## Course One Certificate
+## Course Three Certificate
 
 ![](DistributedProgrammingInJava.png)
 
-## My Course One Notes
+## My Course Three Notes
 
 ### Week9
 - Overview
